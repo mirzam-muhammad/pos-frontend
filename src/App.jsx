@@ -1,4 +1,4 @@
-import RouteNavigation from "./auth/RouteNavigation"
+import RouteNavigation from "./auth/RouteNavigation.jsx";
 
 function App() {
   return (
@@ -8,4 +8,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

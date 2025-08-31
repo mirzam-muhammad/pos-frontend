@@ -1,7 +1,11 @@
+import NavbarComponent from "./NavbarComponent.jsx";
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <NavbarComponent />
+    </div>
   )
 }
 
-export default Home
+export default Home;
