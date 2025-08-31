@@ -7,6 +7,11 @@ import Logout from "../components/Logout.jsx";
 import ListCategory from "../components/category/ListCategory.jsx";
 import AddCategory from "../components/category/AddCategory.jsx";
 import EditCategory from "../components/category/EditCategory.jsx";
+import NoPage from "../components/NoPage.jsx";
+import ListSupplier from "../components/supplier/ListSupplier.jsx";
+import AddSupplier from "../components/supplier/AddSupplier.jsx";
+import EditSupplier from "../components/supplier/EditSupplier.jsx";
+import ListProduct from "../components/product/ListProduct.jsx";
 
 const RouteNavigation = () => {
     const refreshToken = secureLocalStorage.getItem("refreshToken");
@@ -21,7 +26,11 @@ const RouteNavigation = () => {
                     <Route path="/category" element={<ListCategory />} />
                     <Route path="/category/add" element={<AddCategory />} />
                     <Route path="/category/:id" element={<EditCategory />} />
-                    
+                    <Route path="/supplier" element={<ListSupplier />} />
+                    <Route path="/supplier/add" element={<AddSupplier />} />
+                    <Route path="/supplier/:id" element={<EditSupplier />} />
+                    <Route path="/product" element={<ListProduct />} />
+                    <Route path="*" element={<NoPage />} />   
                 </Routes>
                 </BrowserRouter>
                 </>
