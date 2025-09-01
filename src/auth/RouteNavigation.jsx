@@ -12,6 +12,10 @@ import ListSupplier from "../components/supplier/ListSupplier.jsx";
 import AddSupplier from "../components/supplier/AddSupplier.jsx";
 import EditSupplier from "../components/supplier/EditSupplier.jsx";
 import ListProduct from "../components/product/ListProduct.jsx";
+import AddProduct from "../components/product/AddProduct.jsx";
+import EditProduct from "../components/product/EditProduct.jsx";
+import ListSales from "../components/sales/ListSales.jsx";
+import OrderSend from "../components/sales/OrderSend.jsx";
 
 const RouteNavigation = () => {
     const refreshToken = secureLocalStorage.getItem("refreshToken");
@@ -30,6 +34,10 @@ const RouteNavigation = () => {
                     <Route path="/supplier/add" element={<AddSupplier />} />
                     <Route path="/supplier/:id" element={<EditSupplier />} />
                     <Route path="/product" element={<ListProduct />} />
+                    <Route path="/product/add" element={<AddProduct />} />
+                    <Route path="/product/:id" element={<EditProduct />} />
+                    <Route path="/sales" element={<ListSales />} />
+                    <Route path="/orders/:id" element={<OrderSend />} />
                     <Route path="*" element={<NoPage />} />   
                 </Routes>
                 </BrowserRouter>
