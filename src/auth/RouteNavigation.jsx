@@ -16,6 +16,14 @@ import AddProduct from "../components/product/AddProduct.jsx";
 import EditProduct from "../components/product/EditProduct.jsx";
 import ListSales from "../components/sales/ListSales.jsx";
 import OrderSend from "../components/sales/OrderSend.jsx";
+import ListSalesHistory from "../components/salesHistory/ListSalesHistory.jsx";
+import ListPurchase from "../components/purchase/ListPurchase.jsx";
+import AddPurchase from "../components/purchase/AddPurchase.jsx";
+import PrintPurchase from "../components/purchase/PrintPurchase.jsx";
+import SupplierReport from "../components/report/supplier/SupplierReport.jsx";
+import ProductReport from "../components/report/product/ProductReport.jsx";
+import SalesReport from "../components/report/sales/SalesReport.jsx";
+import PurchaseReport from "../components/report/purchase/PurchaseReport.jsx";
 
 const RouteNavigation = () => {
     const refreshToken = secureLocalStorage.getItem("refreshToken");
@@ -38,6 +46,14 @@ const RouteNavigation = () => {
                     <Route path="/product/:id" element={<EditProduct />} />
                     <Route path="/sales" element={<ListSales />} />
                     <Route path="/orders/:id" element={<OrderSend />} />
+                    <Route path="/sales-history" element={<ListSalesHistory />} />
+                    <Route path="/purchase" element={<ListPurchase />} />
+                    <Route path="/purchase/add" element={<AddPurchase />} />
+                    <Route path="/purchase/print/:id" element={<PrintPurchase />} />
+                    <Route path="/supplier-report" element={<SupplierReport />} />
+                    <Route path="/product-report" element={<ProductReport />} />
+                    <Route path="/sales-report" element={<SalesReport />} />
+                    <Route path="/purchase-report" element={<PurchaseReport />} />
                     <Route path="*" element={<NoPage />} />   
                 </Routes>
                 </BrowserRouter>
